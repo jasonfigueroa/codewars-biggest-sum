@@ -22,13 +22,7 @@ def find_sum(m):
     return max(totals)
 
 if __name__ == "__main__":
-    m = [
-        [20, 20, 10, 10],
-        [10, 20, 10, 10],
-        [10, 20, 20, 20],
-        [10, 10, 10, 20]
-    ]
-    
+    # answer: 4416
     # m = [
     #     [131, 673, 234, 103, 18],
     #     [201, 96, 342, 965, 150],
@@ -37,4 +31,18 @@ if __name__ == "__main__":
     #     [805, 732, 524, 37, 331]
     # ]
 
-    print(find_sum(m)) # 140
+    # answer: 140
+    # m = [
+    #     [20, 20, 10, 10],
+    #     [10, 20, 10, 10],
+    #     [10, 20, 20, 20],
+    #     [10, 10, 10, 20]
+    # ]
+
+    # print(find_sum(m))
+
+    # answer: 1185980 (not really sure if this is correct)
+    with open('project_euler_p081_matrix.txt') as textFile:
+        data = [[int(n) for n in line.split(',')] for line in textFile]
+
+    print(find_sum(data))
